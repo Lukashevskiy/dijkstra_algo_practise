@@ -1,5 +1,7 @@
 # This starter workflow is for a CMake project running on multiple platforms. There is a different starter workflow if you just want a single platform.
 # See: https://github.com/actions/starter-workflows/blob/main/ci/cmake-single-platform.yml
+
+
 name: CMake on multiple platforms
 
 on:
@@ -47,6 +49,22 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    
+    - name: Build Boost
+      id: boost
+      uses: egor-tensin/build-boost@v1
+      with:
+        version: 1.71.0
+        libraries: filesystem program_options system
+        platform: x64
+        configuration: Release
+    
+    - name: Show paths
+      run: |
+        printf 'Boost has been unpacked to: %s\n' '${{ steps.boost.outputs.root }}'
+        printf 'Libraries can be found here: %s\n' '${{ steps.boost.outputs.librarydir }}'
+      shell: bash
+    
     - name: Set reusable strings
       # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
       id: strings
