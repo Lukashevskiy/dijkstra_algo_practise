@@ -33,7 +33,7 @@ jobs:
       id: boost
       uses: egor-tensin/build-boost@v1
       with:
-        version: 1.71.0
+        version: 1.72.0
         libraries: graph thread system
         platform: x64
         configuration: Debug
