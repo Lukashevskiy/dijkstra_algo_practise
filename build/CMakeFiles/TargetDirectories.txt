@@ -1,5 +1,0 @@
-/home/dmitriy/algos/dijkstra/build/CMakeFiles/dijkstra.dir
-/home/dmitriy/algos/dijkstra/build/CMakeFiles/package.dir
-/home/dmitriy/algos/dijkstra/build/CMakeFiles/package_source.dir
-/home/dmitriy/algos/dijkstra/build/CMakeFiles/edit_cache.dir
-/home/dmitriy/algos/dijkstra/build/CMakeFiles/rebuild_cache.dir
