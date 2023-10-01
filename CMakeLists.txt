@@ -19,5 +19,5 @@ target_link_directories(
         Boost::system
         Boost::thread
 )
-
+target_include_directories(dijkstra PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
 target_sources(dijkstra PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/dijkstra_by_boost.cpp)
