@@ -51,7 +51,7 @@ jobs:
         -B${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} 
         -DBOOST_ROOT=${{ steps.boost.outputs.root }} 
         -DBOOST_LIBRARYDIR=${{ steps.boost.outputs.librarydir }}
-        -DBoost_INCLUDE_DIR=$BOOST_ROOT_1_72_0/include
+        -DBoost_INCLUDE_DIR=${{ steps.boost.outputs.root }}/include
         -S ${{ github.workspace }}
 
     - name: Build
