@@ -26,12 +26,12 @@ jobs:
     - name: Cache Boost
       uses: actions/cache@v2
       with:
-        path: '${{ runner.workspace }}/boost_*.tar.gz'
+        path: '${{ github.workspace }}/boost_*.tar.gz'
         key: 'boost-1.83.0'
         
     - name: Build Boost
       id: boost
-      uses: egor-tensin/build-boost@v1
+      uses: egor-tensin/build-boost@v1.4
       with:
         version: 1.83.0
         libraries: graph thread system atomic chrono
