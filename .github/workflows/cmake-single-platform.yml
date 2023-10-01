@@ -27,13 +27,13 @@ jobs:
       uses: actions/cache@v2
       with:
         path: '${{ runner.workspace }}/boost_*.tar.gz'
-        key: 'boost-1.72.0'
+        key: 'boost-1.83.0'
         
     - name: Build Boost
       id: boost
       uses: egor-tensin/build-boost@v1
       with:
-        version: 1.72.0
+        version: 1.83.0
         libraries: graph thread system
         platform: x64
         configuration: Debug
