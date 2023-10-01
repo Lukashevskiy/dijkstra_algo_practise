@@ -55,7 +55,7 @@ jobs:
       uses: egor-tensin/build-boost@v1
       with:
         version: 1.71.0
-        libraries: filesystem program_options system
+        libraries: graph thread system
         platform: x64
         configuration: Release
     
