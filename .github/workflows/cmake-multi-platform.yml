@@ -41,13 +41,19 @@ jobs:
         exclude:
           - os: windows-latest
             c_compiler: gcc
-          - os: windows-latest
+          - os: ubuntu-latest
             c_compiler: clang
           - os: ubuntu-latest
             c_compiler: cl
 
     steps:
     - uses: actions/checkout@v3
+    
+    - name: Cache Boost
+      uses: actions/cache@v2
+      with:
+        path: '${{ github.workspace }}/boost_*.tar.gz'
+        key: 'boost-1.72.0'
 
     
     - name: Build Boost
