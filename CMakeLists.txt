@@ -22,7 +22,7 @@ target_link_directories(
         Boost::thread
 )
 target_include_directories(dijkstra PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
-target_sources(dijkstra PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/dijkstra_by_boost.cpp)
+target_sources(dijkstra PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/dijkstra_by_self_realization_but_boost_graph_container.cpp)
 
 
 add_test(NAME study_case_test WORKING_DIRECTORY ${PROJECT_SOURCE_DIR} COMMAND ${PROJECT_BINARY_DIR}/${PROJECT_NAME} ./src/input/1.txt)
