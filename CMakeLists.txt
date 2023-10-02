@@ -21,6 +21,9 @@ target_link_directories(
         Boost::system
         Boost::thread
 )
+
+set(print_graph True)
+
 target_include_directories(dijkstra PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
 target_sources(dijkstra PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/dijkstra_by_self_realization_but_boost_graph_container.cpp)
 

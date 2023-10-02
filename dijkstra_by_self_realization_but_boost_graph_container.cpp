@@ -70,6 +70,7 @@ int main(int args, char* argv[]){
 #ifdef print_graph
     boost::dynamic_properties dp;
     dp.property("id", get(boost::vertex_index, graph));
+    dp.property("label", get(boost::edge_weight, graph));
     dp.property("weight", get(boost::edge_weight, graph));
     std::ofstream fout("graph.dot");
     boost::write_graphviz_dp(fout, graph, dp, std::string{"id"});
