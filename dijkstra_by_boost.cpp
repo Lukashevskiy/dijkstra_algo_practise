@@ -2,7 +2,7 @@
 #include <boost/graph/adjacency_list.hpp>
 #include <boost/graph/graph_traits.hpp>
 #include <boost/property_map/property_map.hpp>
-#include <boost/graph/dijkstra_shortest_paths.hpp>
+#include <boost/graph/dijkstra_shortest_paths_no_color_map.hpp>
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -53,7 +53,7 @@ int main(int args, char *argv[]){
     std::vector<vertex_descriptor> predecessors(num_vertices(graph));
     std::vector<int> distances(num_vertices(graph));
     
-    boost::dijkstra_shortest_paths(graph, start, boost::predecessor_map(&predecessors[0]).distance_map(&distances[0]));
+    boost::dijkstra_shortest_paths_no_color_map(graph, start, boost::predecessor_map(&predecessors[0]).distance_map(&distances[0]));
 
 
 
