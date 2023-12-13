@@ -1,0 +1,13 @@
+CompileFlags:
+  Add: [-xc++, -std=c++23, -Wall, -Wno-missing-prototypes, -pedantic]
+  # Remove extra warnings specified in compile commands.
+  # Single value is also acceptable, same as "Remove: [-mabi]"
+  Remove: -mabi
+  Compiler: g++-13
+
+Diagnostics:
+  # Tweak Clang-Tidy checks.
+  ClangTidy:
+    Add: [performance*, modernize*, readability*, cppcoreguidelines*]
+    Remove: [modernize-use-trailing-return-type]
+    
